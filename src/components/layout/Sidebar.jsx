@@ -31,23 +31,45 @@ const Sidebar = () => {
         <div className="flex flex-col  border-b-3 border-b-gray-400/20  mx-4 mt-2 text-gray-400 font-semibold  ">
           <h5>MAIN MENU</h5>
           <div className="flex-col flex ml-5 gap-4 my-4 text-xl">
-            <NavLink className="flex items-center gap-2" to="/">
-              {" "}
+            <NavLink
+              className={({ isActive }) =>
+                `flex items-center gap-2 px-3 py-2  transition-all rounded-2xl duration-300 ${isActive ? " bg-violet-200 text-violet-600 " : "hover:text-violet-600 hover:bg-violet-200"} `
+              }
+              to="/"
+            >
               <TbClover />
               Overview
             </NavLink>
-            <NavLink className="flex items-center gap-2" to="/shipment">
-              {" "}
+            <NavLink
+              className={({ isActive }) =>
+                `flex items-center gap-2 px-3 py-2  transition-all rounded-2xl duration-300 ${isActive ? " bg-violet-200 text-violet-600 " : "hover:text-violet-600 hover:bg-violet-200"} `
+              }
+              to="/shipment"
+            >
               <FaTruckFast /> Shipment
             </NavLink>
-            <NavLink className="flex items-center gap-2" to="/orders">
-              {" "}
+            <NavLink
+              className={({ isActive }) =>
+                `flex items-center gap-2 px-3 py-2  transition-all rounded-2xl duration-300 ${isActive ? " bg-violet-200 text-violet-600 " : "hover:text-violet-600 hover:bg-violet-200"} `
+              }
+              to="/orders"
+            >
               <RiLuggageCartFill /> Orders
             </NavLink>
-            <NavLink className="flex items-center gap-2" to="/message">
+            <NavLink
+              className={({ isActive }) =>
+                `flex items-center gap-2 px-3 py-2  transition-all rounded-2xl duration-300 ${isActive ? " bg-violet-200 text-violet-600 " : "hover:text-violet-600 hover:bg-violet-200"} `
+              }
+              to="/message"
+            >
               <MdMessage /> Message
             </NavLink>
-            <NavLink className="flex items-center gap-2" to="/activity">
+            <NavLink
+              className={({ isActive }) =>
+                `flex items-center gap-2 px-3 py-2  transition-all rounded-2xl duration-300 ${isActive ? " bg-violet-200 text-violet-600 " : "hover:text-violet-600 hover:bg-violet-200"} `
+              }
+              to="/activity"
+            >
               <RxActivityLog /> Activity
             </NavLink>
           </div>
@@ -55,31 +77,51 @@ const Sidebar = () => {
 
         <div className="flex flex-col  border-b-3 border-b-gray-400/20 mx-4 mt-2 text-gray-400 font-semibold ">
           <h5>GENERAL</h5>
-          <div className="flex-col flex ml-5 gap-4 my-4 text-xl">
-            <NavLink className="flex items-center gap-2" to="/report">
-              {" "}
+          <div className="flex-col flex ml-5  my-4 text-xl">
+            <NavLink
+              className={({ isActive }) =>
+                `flex items-center gap-2 px-3 py-2  transition-all rounded-2xl duration-300 ${isActive ? " bg-violet-200 text-violet-600 " : "hover:text-violet-600 hover:bg-violet-200"} `
+              }
+              to="/report"
+            >
               <MdReportProblem /> Report
             </NavLink>
-            <NavLink className="flex items-center gap-2" to="/support">
-              {" "}
+            <NavLink
+              className={({ isActive }) =>
+                `flex items-center gap-2 px-3 py-2  transition-all rounded-2xl duration-300 ${isActive ? " bg-violet-200 text-violet-600 " : "hover:text-violet-600 hover:bg-violet-200"} `
+              }
+              to="/support"
+            >
               <MdOutlineSupportAgent /> Support
             </NavLink>
-            <NavLink className="flex items-center gap-2" to="/account">
-              {" "}
+            <NavLink
+              className={({ isActive }) =>
+                `flex items-center gap-2 px-3 py-2  transition-all rounded-2xl duration-300 ${isActive ? " bg-violet-200 text-violet-600 " : "hover:text-violet-600 hover:bg-violet-200"} `
+              }
+              to="/account"
+            >
               <RiAccountCircleFill /> Account
             </NavLink>
           </div>
         </div>
 
-        <div className="flex flex-col   mx-4  text-gray-400 font-semibold mt-75">
+        <div className="flex flex-col   mx-4  text-gray-400 font-semibold mt-42">
           <h5>OTHERS</h5>
-          <div className="flex-col flex ml-5 gap-4 my-4 text-xl">
-            <NavLink className="flex items-center gap-2" to="/setting">
-              {" "}
+          <div className="flex-col flex ml-5 gap-1  my-4 text-xl">
+            <NavLink
+              className={({ isActive }) =>
+                `flex items-center gap-2 px-3 py-2  transition-all rounded-2xl duration-300 ${isActive ? " bg-violet-200 text-violet-600 " : "hover:text-violet-600 hover:bg-violet-200"} `
+              }
+              to="/setting"
+            >
               <IoSettings /> Setting
             </NavLink>
-            <NavLink className="flex items-center gap-2" to="/logout">
-              {" "}
+            <NavLink
+              className={({ isActive }) =>
+                `flex items-center gap-2 px-3 py-2  transition-all rounded-2xl duration-300 ${isActive ? " bg-violet-200 text-violet-600 " : "hover:text-violet-600 hover:bg-violet-200"} `
+              }
+              to="/logout"
+            >
               <RiLogoutBoxLine /> Logout
             </NavLink>
           </div>
