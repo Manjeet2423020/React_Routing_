@@ -1,8 +1,8 @@
 import pic from "../../assets/img.png";
 const Overview = () => {
   return (
-    <div className="div">
-      <img className="h-200 w-400" src={pic} alt="img" />
+    <div className="flex justify-center items-center p-10 overflow-hidden">
+      <img className="w-full  max-h-full object-contain " src={pic} alt="img" />
     </div>
   );
 };

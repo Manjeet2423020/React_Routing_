@@ -14,26 +14,26 @@ import { RiLogoutBoxLine } from "react-icons/ri";
 
 const Sidebar = () => {
   return (
-    <div className="bg-white flex flex-col w-70">
-      <div className="flex items-center  gap-2 text-2xl  border-3 border-gray-400/20 px-5 h-20">
+    <div className="bg-white flex flex-col w-64 h-screen border-r border-gray-200">
+      <div className="flex items-center  gap-2 text-2xl  border-3 border-gray-400/20 px-5 h-21">
         <div className="bg-violet-600 text-white w-9 h-9 rounded-full flex items-center justify-center">
           <FaTruck />
         </div>
 
-        <h2 className="font-semibold"> Drivergo</h2>
+        <h2 className="font-bold text-black/80"> Drivergo</h2>
 
-        <div className="ml-15 text-gray-400/50">
+        <div className="ml-auto text-gray-400/50">
           <TiThMenuOutline />
         </div>
       </div>
 
-      <nav className="flex flex-col border-r-3 border-gray-400/20">
-        <div className="flex flex-col  border-b-3 border-b-gray-400/20  mx-4 mt-2 text-gray-400 font-semibold  ">
+      <nav className="flex flex-col h-screen border-r-3 border-gray-400/20">
+        <div className="flex flex-col  border-b-3 border-b-gray-400/20  mx-4 mt-2 text-gray-400/70 font-bold text-xs ">
           <h5>MAIN MENU</h5>
-          <div className="flex-col flex ml-5 gap-4 my-4 text-xl">
+          <div className="flex-col flex ml-3 gap-2 my-4 font-semibold text-lg">
             <NavLink
               className={({ isActive }) =>
-                `flex items-center gap-2 px-3 py-2  transition-all rounded-2xl duration-300 ${isActive ? " bg-violet-200 text-violet-600 " : "hover:text-violet-600 hover:bg-violet-200"} `
+                `flex items-center gap-2 px-3 py-2  transition-all rounded-xl duration-300 ${isActive ? " bg-violet-50 text-violet-600 " : "hover:text-violet-600 hover:bg-violet-50"} `
               }
               to="/"
             >
@@ -42,7 +42,7 @@ const Sidebar = () => {
             </NavLink>
             <NavLink
               className={({ isActive }) =>
-                `flex items-center gap-2 px-3 py-2  transition-all rounded-2xl duration-300 ${isActive ? " bg-violet-200 text-violet-600 " : "hover:text-violet-600 hover:bg-violet-200"} `
+                `flex items-center gap-2 px-3 py-2  transition-all rounded-xl duration-300 ${isActive ? " bg-violet-50 text-violet-600 " : "hover:text-violet-600 hover:bg-violet-50"} `
               }
               to="/shipment"
             >
@@ -50,7 +50,7 @@ const Sidebar = () => {
             </NavLink>
             <NavLink
               className={({ isActive }) =>
-                `flex items-center gap-2 px-3 py-2  transition-all rounded-2xl duration-300 ${isActive ? " bg-violet-200 text-violet-600 " : "hover:text-violet-600 hover:bg-violet-200"} `
+                `flex items-center gap-2 px-3 py-2  transition-all rounded-xl duration-300 ${isActive ? " bg-violet-50 text-violet-600 " : "hover:text-violet-600 hover:bg-violet-50"} `
               }
               to="/orders"
             >
@@ -58,7 +58,7 @@ const Sidebar = () => {
             </NavLink>
             <NavLink
               className={({ isActive }) =>
-                `flex items-center gap-2 px-3 py-2  transition-all rounded-2xl duration-300 ${isActive ? " bg-violet-200 text-violet-600 " : "hover:text-violet-600 hover:bg-violet-200"} `
+                `flex items-center gap-2 px-3 py-2  transition-all rounded-xl duration-300 ${isActive ? " bg-violet-50 text-violet-600 " : "hover:text-violet-600 hover:bg-violet-50"} `
               }
               to="/message"
             >
@@ -66,7 +66,7 @@ const Sidebar = () => {
             </NavLink>
             <NavLink
               className={({ isActive }) =>
-                `flex items-center gap-2 px-3 py-2  transition-all rounded-2xl duration-300 ${isActive ? " bg-violet-200 text-violet-600 " : "hover:text-violet-600 hover:bg-violet-200"} `
+                `flex items-center gap-2 px-3 py-2  transition-all rounded-xl duration-300 ${isActive ? " bg-violet-50 text-violet-600 " : "hover:text-violet-600 hover:bg-violet-50"} `
               }
               to="/activity"
             >
@@ -75,12 +75,12 @@ const Sidebar = () => {
           </div>
         </div>
 
-        <div className="flex flex-col  border-b-3 border-b-gray-400/20 mx-4 mt-2 text-gray-400 font-semibold ">
+        <div className="flex flex-col   mx-4 mt-2 text-gray-400/70 font-semibold text-xs ">
           <h5>GENERAL</h5>
-          <div className="flex-col flex ml-5  my-4 text-xl">
+          <div className="flex-col flex ml-3  mb-4  text-lg gap-2 ">
             <NavLink
               className={({ isActive }) =>
-                `flex items-center gap-2 px-3 py-2  transition-all rounded-2xl duration-300 ${isActive ? " bg-violet-200 text-violet-600 " : "hover:text-violet-600 hover:bg-violet-200"} `
+                `flex items-center gap-2 px-3 py-2  transition-all rounded-xl duration-300 ${isActive ? " bg-violet-50 text-violet-600 " : "hover:text-violet-600 hover:bg-violet-50"} `
               }
               to="/report"
             >
@@ -88,7 +88,7 @@ const Sidebar = () => {
             </NavLink>
             <NavLink
               className={({ isActive }) =>
-                `flex items-center gap-2 px-3 py-2  transition-all rounded-2xl duration-300 ${isActive ? " bg-violet-200 text-violet-600 " : "hover:text-violet-600 hover:bg-violet-200"} `
+                `flex items-center gap-2 px-3 py-2  transition-all rounded-xl duration-300 ${isActive ? " bg-violet-50 text-violet-600 " : "hover:text-violet-600 hover:bg-violet-50"} `
               }
               to="/support"
             >
@@ -96,7 +96,7 @@ const Sidebar = () => {
             </NavLink>
             <NavLink
               className={({ isActive }) =>
-                `flex items-center gap-2 px-3 py-2  transition-all rounded-2xl duration-300 ${isActive ? " bg-violet-200 text-violet-600 " : "hover:text-violet-600 hover:bg-violet-200"} `
+                `flex items-center gap-2 px-3 py-2  transition-all rounded-xl duration-300 ${isActive ? " bg-violet-50 text-violet-600 " : "hover:text-violet-600 hover:bg-violet-50"} `
               }
               to="/account"
             >
@@ -105,12 +105,12 @@ const Sidebar = () => {
           </div>
         </div>
 
-        <div className="flex flex-col   mx-4  text-gray-400 font-semibold mt-42">
+        <div className="flex flex-col mb-4 mx-4  text-gray-400/70 font-semibold mt-auto text-xs">
           <h5>OTHERS</h5>
-          <div className="flex-col flex ml-5 gap-1  my-4 text-xl">
+          <div className="flex-col flex ml-3 gap-2  my-3 text-lg">
             <NavLink
               className={({ isActive }) =>
-                `flex items-center gap-2 px-3 py-2  transition-all rounded-2xl duration-300 ${isActive ? " bg-violet-200 text-violet-600 " : "hover:text-violet-600 hover:bg-violet-200"} `
+                `flex items-center gap-3 px-3 py-2  transition-all rounded-xl duration-300 ${isActive ? " bg-violet-50 text-violet-600 " : "hover:text-violet-600 hover:bg-violet-50"} `
               }
               to="/setting"
             >
@@ -118,7 +118,7 @@ const Sidebar = () => {
             </NavLink>
             <NavLink
               className={({ isActive }) =>
-                `flex items-center gap-2 px-3 py-2  transition-all rounded-2xl duration-300 ${isActive ? " bg-violet-200 text-violet-600 " : "hover:text-violet-600 hover:bg-violet-200"} `
+                `flex items-center gap-3 px-3 py-2  transition-all rounded-xl duration-300 ${isActive ? " bg-violet-50 text-violet-600 " : "hover:text-violet-600 hover:bg-violet-50"} `
               }
               to="/logout"
             >

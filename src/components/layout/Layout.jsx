@@ -3,11 +3,11 @@ import Sidebar from "./Sidebar";
 import Navbar from "./Navbar";
 const Layout = () => {
   return (
-    <div className=" flex">
+    <div className=" flex h-screen overflow-hidden">
       <Sidebar />
-      <div className="dvi">
+      <div className="flex-1 flex flex-col">
         <Navbar />
-        <div className="dvi">
+        <div className="flex-1 overflow-auto">
           <Outlet />
         </div>
       </div>
