@@ -14,7 +14,7 @@ import { RiLogoutBoxLine } from "react-icons/ri";
 
 const Sidebar = () => {
   return (
-    <div className="bg-white flex flex-col w-64 h-screen border-r border-gray-200">
+    <div className=" flex flex-col w-64 h-screen border-r border-b-3 border-gray-400/20 rounded-xl">
       <div className="flex items-center  gap-2 text-2xl  border-3 border-gray-400/20 px-5 h-21">
         <div className="bg-violet-600 text-white w-9 h-9 rounded-full flex items-center justify-center">
           <FaTruck />
@@ -46,7 +46,7 @@ const Sidebar = () => {
               }
               to="/shipment"
             >
-              <FaTruckFast /> Shipment
+              <FaTruckFast /> User Management
             </NavLink>
             <NavLink
               className={({ isActive }) =>

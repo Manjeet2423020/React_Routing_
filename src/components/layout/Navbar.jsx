@@ -1,9 +1,16 @@
 import { IoMdSearch } from "react-icons/io";
 import { IoIosNotificationsOutline } from "react-icons/io";
 import pic from "../../assets/img1.jpg";
+import { useContext } from "react";
+import { ThemeContext } from "../../context/ThemeContext";
+
+import { MdDarkMode } from "react-icons/md";
+import { MdLightMode } from "react-icons/md";
 function Navbar() {
+  const { theme, toggleTheme } = useContext(ThemeContext);
+
   return (
-    <div className="flex bg-white h-20 w-full border-b-3 border-b-gray-400/20 px-4 items-center justify-between">
+    <div className="flex  h-20 w-full border-b-3 border-b-gray-400/20 px-4 items-center justify-between">
       <div className="flex gap-4 ml-4">
         <h3 className="text-2xl font-bold text-black/80">Shipment Track</h3>
         <select className="font-semibold text-gray-600" name="select" id="abc">
@@ -14,6 +21,9 @@ function Navbar() {
 
       <div className="flex items-center gap-4">
         <div className="flex items-center text-xl gap-6 text-gray-500 font-bold">
+          <button onClick={toggleTheme}>
+            {theme === "dark" ? <MdLightMode /> : <MdDarkMode />}
+          </button>
           <IoMdSearch />
           <IoIosNotificationsOutline />
 
