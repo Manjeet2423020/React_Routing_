@@ -2,22 +2,25 @@ import { CiImport } from "react-icons/ci";
 import { IoPersonAddOutline } from "react-icons/io5";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchUsers } from "../../features/users/userSlice";
+import { fetchUsers, setPage } from "../../features/users/userSlice";
 import { setSearchText, setFilter } from "../../features/users/userSlice";
 const Shipment = () => {
   const dispatch = useDispatch();
 
   const searchText = useSelector((state) => state.users.searchText);
-  // const filter = useSelector((state) => state.users.filter);
+
   const users = useSelector((state) => state.users.data);
+
+  const { page, limit, total } = useSelector((state) => state.users);
+  const totalPages = Math.ceil(total / limit);
 
   const filteredUsers = users.filter((user) =>
     user.firstName.toLowerCase().includes(searchText.toLowerCase()),
   );
 
   useEffect(() => {
-    dispatch(fetchUsers());
-  }, []);
+    dispatch(fetchUsers({ page, limit }));
+  }, [page]);
 
   return (
     <div className="m-5">
@@ -130,6 +133,23 @@ const Shipment = () => {
               <span className="w-35">{user.birthDate}</span>
             </div>
           ))}
+        </div>
+        <div className="flex gap-4 mt-5">
+          <button
+            className="ml-auto border-2 rounded-sm w-10 text-gray-500"
+            disabled={page === 1}
+            onClick={() => dispatch(setPage(page - 1))}
+          >
+            Prev
+          </button>
+          <span>Page-{page}</span>
+          <button
+            className="border-2 rounded-sm w-10 text-gray-500"
+            disabled={page === totalPages}
+            onClick={() => dispatch(setPage(page + 1))}
+          >
+            Next
+          </button>
         </div>
       </div>
     </div>

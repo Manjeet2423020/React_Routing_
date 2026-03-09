@@ -3,17 +3,27 @@ import axios from "axios";
 
 const initialState = {
   data: [],
+  page: 1,
+  limit: 10,
+  total: 0,
+
   searchText: "",
   filter: "all",
 
   loading: false,
 };
 // api call
-export const fetchUsers = createAsyncThunk("users/fetchUsers", async () => {
-  const res = await axios.get("https://dummyjson.com/users");
-  console.log(res.data);
-  return res.data.users;
-});
+export const fetchUsers = createAsyncThunk(
+  "users/fetchUsers",
+  async ({ page, limit }) => {
+    const skip = (page - 1) * limit;
+    const res = await axios.get(
+      `https://dummyjson.com/users?limit=${limit}&skip=${skip}`,
+    );
+    console.log(res.data);
+    return res.data;
+  },
+);
 
 export const userSlice = createSlice({
   name: "users",
@@ -21,6 +31,9 @@ export const userSlice = createSlice({
   reducers: {
     setSearchText: (state, action) => {
       state.searchText = action.payload;
+    },
+    setPage: (state, action) => {
+      state.page = action.payload;
     },
     // setFilter: (state, action) => {
     //   state.filter = action.payload;
@@ -33,8 +46,8 @@ export const userSlice = createSlice({
         state.loading = true;
       })
       .addCase(fetchUsers.fulfilled, (state, action) => {
-        state.loading = false;
-        state.data = action.payload;
+        state.data = action.payload.users;
+        state.total = action.payload.total;
       })
       .addCase(fetchUsers.rejected, (state) => {
         state.loading = false;
@@ -42,5 +55,5 @@ export const userSlice = createSlice({
   },
 });
 
-export const { setSearchText, setFilter } = userSlice.actions;
+export const { setSearchText, setFilter, setPage } = userSlice.actions;
 export default userSlice.reducer;
