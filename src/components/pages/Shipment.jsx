@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchUsers, setPage } from "../../features/users/userSlice";
 import { setSearchText, setFilter } from "../../features/users/userSlice";
+import { useNavigate } from "react-router-dom";
 const Shipment = () => {
   const dispatch = useDispatch();
 
@@ -13,6 +14,8 @@ const Shipment = () => {
 
   const { page, limit, total } = useSelector((state) => state.users);
   const totalPages = Math.ceil(total / limit);
+
+  const navigate = useNavigate();
 
   const filteredUsers = users.filter((user) =>
     user.firstName.toLowerCase().includes(searchText.toLowerCase()),
@@ -114,6 +117,7 @@ const Shipment = () => {
             <div
               className="flex justify-between p-4 w-full gap-5 border-b-3 border-gray-400/30 h-20 items-center  "
               key={user.id}
+              onClick={() => navigate(`/users/${user.id}`)}
             >
               <h3 className="w-50 flex gap-2">
                 <div className="h-10 w-10 bg-gray-200  rounded-full pl-10"></div>

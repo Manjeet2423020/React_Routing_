@@ -20,7 +20,7 @@ const Sidebar = () => {
           <FaTruck />
         </div>
 
-        <h2 className="font-bold text-black/80"> Drivergo</h2>
+        <h2 className="font-bold "> Drivergo</h2>
 
         <div className="ml-auto text-gray-400/50">
           <TiThMenuOutline />

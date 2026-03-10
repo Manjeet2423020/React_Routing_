@@ -12,7 +12,7 @@ function Navbar() {
   return (
     <div className="flex  h-20 w-full border-b-3 border-b-gray-400/20 px-4 items-center justify-between">
       <div className="flex gap-4 ml-4">
-        <h3 className="text-2xl font-bold text-black/80">Shipment Track</h3>
+        <h3 className="text-2xl font-bold ">Shipment Track</h3>
         <select className="font-semibold text-gray-600" name="select" id="abc">
           <option value="status">Status</option>
           <option value="drive">Drive</option>

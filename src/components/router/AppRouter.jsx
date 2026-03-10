@@ -10,6 +10,7 @@ import Support from "../pages/Support";
 import Account from "../pages/Account";
 import Settings from "../pages/Settings";
 import Logout from "../pages/Logout";
+import UserProfile from "../pages/users/UserProfile";
 
 const AppRouter = () => {
   return (
@@ -21,6 +22,7 @@ const AppRouter = () => {
           <Route index element={<Overview />} />
           {/* other pages */}
           <Route path="/shipment" element={<Shipment />} />
+          <Route path="/users/:id" element={<UserProfile />} />
           <Route path="/orders" element={<Orders />} />
           <Route path="/message" element={<Message />} />
           <Route path="/activity" element={<Activity />} />
