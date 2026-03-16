@@ -24,13 +24,15 @@ function UserProfile() {
   if (!user) return <p>Loading ....</p>;
   return (
     <div className="m-5">
-      <nav className="flex items-center justify-between h-20 ">
+      <nav className="flex flex-col md:flex-row md:items-center md:justify-between h-20 gap-2 ">
         <div className="">
-          <h1 className="text-2xl font-bold">User Details</h1>
-          <span className="text-gray-500">users/ normaluser</span>
+          <h1 className="text-xl md:text-2xl font-bold">User Details</h1>
+          <span className="md:text-normal text-sm text-gray-500">
+            users/ normaluser
+          </span>
         </div>
         <div className="flex gap-4 ">
-          <button className="border-2 border-gray-400 rounded-lg h-9 w-35 font-bold">
+          <button className="border-2 border-gray-400 rounded-lg h-9 w-35  font-bold">
             <div className="flex justify-center items-center gap-2">
               <MdOutlineEdit />
               Edit Profile
@@ -44,7 +46,7 @@ function UserProfile() {
           </button>
         </div>
       </nav>
-      <div className="flex justify-between">
+      <div className="md:flex mt-6 md:mt-0 md:justify-between">
         <div className="flex ">
           <div className=" flex flex-col items-center  border-3 border-gray-300/20 rounded-2xl  gap-2">
             <div className="  bg-gradient-to-r from-violet-500 via-violet-300 to-white h-35 w-120 mt-5"></div>
@@ -117,25 +119,25 @@ function UserProfile() {
             </div>
           </div>
         </div>
-        <div className="w-full ml-5 ">
-          <div className="flex justify-between border-b-2 border-gray-400/20">
-            <button className="border-2 border-violet-300 rounded-xl w-30 h-10 font-semibold">
+        <div className="md:w-full w-110 ml-5 mt-5 md:mt-0">
+          <div className="flex md:flex-row gap-2  flex-col justify-between border-b-2 border-gray-400/20 pb-5">
+            <button className="border-2 border-violet-300 rounded-xl md:w-30 w-full h-10 font-semibold">
               Overview
             </button>
-            <button className="border-2 border-violet-300 rounded-xl w-30 h-10 font-semibold">
+            <button className="border-2 border-violet-300 rounded-xl md:w-30 w-full h-10 font-semibold">
               Platform
             </button>
-            <button className="border-2 border-violet-300 rounded-xl w-30 h-10 font-semibold">
+            <button className="border-2 border-violet-300 rounded-xl md:w-30 w-full h-10 font-semibold">
               Statistics
             </button>
-            <button className="border-2 border-violet-300 rounded-xl w-30 h-10 font-semibold">
+            <button className="border-2 border-violet-300 rounded-xl md:w-30 w-full h-10 font-semibold">
               Activity Log
             </button>
-            <button className="border-2 border-violet-300 rounded-xl w-30 h-10 font-semibold">
+            <button className="border-2 border-violet-300 rounded-xl md:w-30 w-full h-10 font-semibold">
               Settings
             </button>
           </div>
-          <div className="flex w-full gap-3">
+          <div className="flex md:flex-row flex-col w-full gap-3">
             <div className=" flex-1  border-3 border-gray-300/20  mt-5 p-5 rounded-2xl">
               <h1 className="h-15 w-100">POSTS PERFORMANCE</h1>
               <div className="flex justify-between items-center border-b-2 border-gray-300/30 pb-3">
