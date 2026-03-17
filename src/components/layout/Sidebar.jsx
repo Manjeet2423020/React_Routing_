@@ -16,7 +16,7 @@ const Sidebar = () => {
   return (
     <div className=" flex flex-col w-16 sm:w-20 md:w-56 lg:w-64 h-screen border-r border-b-3 border-gray-400/20 rounded-xl">
       <div className="flex items-center  gap-2 text-lg sm:text-xl md:text-2xl  border-3 border-gray-400/20 px-2 sm:px-3 md:px-5 h-16 md:h-21">
-        <div className="bg-violet-600 text-white w-8 h-8  md:w-9 md:h-9 rounded-full flex items-center justify-center">
+        <div className="bg-violet-600 text-white w-5 h-5  md:w-9 md:h-9 rounded-full flex items-center justify-center">
           <FaTruck />
         </div>
 

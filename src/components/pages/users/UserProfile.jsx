@@ -49,7 +49,7 @@ function UserProfile() {
       <div className="md:flex mt-6 md:mt-0 md:justify-between">
         <div className="flex ">
           <div className=" flex flex-col items-center  border-3 border-gray-300/20 rounded-2xl  gap-2">
-            <div className="  bg-gradient-to-r from-violet-500 via-violet-300 to-white h-35 w-120 mt-5"></div>
+            <div className="  bg-gradient-to-r from-violet-500 via-violet-300 to-white md:h-35 h-25 w-90 md:w-120 mt-5"></div>
             <div className="bg-gray-200 h-30 w-30 border-2 border-white rounded-full flex items-center justify-center text-6xl -mt-12 ">
               <FaRegUser />
             </div>
@@ -121,23 +121,23 @@ function UserProfile() {
         </div>
         <div className="md:w-full w-110 ml-5 mt-5 md:mt-0">
           <div className="flex md:flex-row gap-2  flex-col justify-between border-b-2 border-gray-400/20 pb-5">
-            <button className="border-2 border-violet-300 rounded-xl md:w-30 w-full h-10 font-semibold">
+            <button className="border-2 border-violet-300 rounded-xl md:w-30 w-85 h-10 font-semibold">
               Overview
             </button>
-            <button className="border-2 border-violet-300 rounded-xl md:w-30 w-full h-10 font-semibold">
+            <button className="border-2 border-violet-300 rounded-xl md:w-30 w-85 h-10 font-semibold">
               Platform
             </button>
-            <button className="border-2 border-violet-300 rounded-xl md:w-30 w-full h-10 font-semibold">
+            <button className="border-2 border-violet-300 rounded-xl md:w-30 w-85 h-10 font-semibold">
               Statistics
             </button>
-            <button className="border-2 border-violet-300 rounded-xl md:w-30 w-full h-10 font-semibold">
+            <button className="border-2 border-violet-300 rounded-xl md:w-30 w-85 h-10 font-semibold">
               Activity Log
             </button>
-            <button className="border-2 border-violet-300 rounded-xl md:w-30 w-full h-10 font-semibold">
+            <button className="border-2 border-violet-300 rounded-xl md:w-30 w-85 h-10 font-semibold">
               Settings
             </button>
           </div>
-          <div className="flex md:flex-row flex-col w-full gap-3">
+          <div className="flex md:flex-row flex-col md:w-full w-85 gap-3">
             <div className=" flex-1  border-3 border-gray-300/20  mt-5 p-5 rounded-2xl">
               <h1 className="h-15 w-100">POSTS PERFORMANCE</h1>
               <div className="flex justify-between items-center border-b-2 border-gray-300/30 pb-3">
@@ -192,7 +192,7 @@ function UserProfile() {
               </div>
             </div>
           </div>
-          <div className="border-3 border-gray-300/30 mt-5 rounded-2xl p-5">
+          <div className="border-3 border-gray-300/30 mt-5 rounded-2xl md:w-full w-85  p-5">
             <h1 className="font-bold text-2xl">Recent Engagement</h1>
             <div className="mt-5">
               <div className="border-b-2 border-gray-300/30 pb-3 flex justify-between">

@@ -10,7 +10,7 @@ function Navbar() {
   const { theme, toggleTheme } = useContext(ThemeContext);
 
   return (
-    <div className="flex h-15 md:h-19 w-full border-b-3 border-b-gray-400/20 px-4 items-center justify-between">
+    <div className="flex h-15 md:h-19 w-full flex-wrap border-b-3 border-b-gray-400/20 px-4 items-center md:justify-between gap-30">
       <div className="flex items-center gap-2 md:gap-4 md:ml-4">
         <h3 className="text-lg sm:text-xl md:text-2xl font-bold ">
           Shipment Track
@@ -43,9 +43,7 @@ function Navbar() {
               alt="photo"
             />
             <div className="hidden md:block">
-              <h2 className="text-base font-semibold text-black">
-                Pratik Podar
-              </h2>
+              <h2 className="text-base font-semibold text-black">Manjeet</h2>
               <h2 className="text-xs text-gray-400 font-bold">Manager</h2>
             </div>
           </div>
